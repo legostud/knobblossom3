@@ -1,0 +1,25 @@
+<h1>Listing project_photos</h1>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Photo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @project_photos.each do |project_photo| %>
+  <tr>
+    <td><%= project_photo.project_name %></td>
+    <td><%= project_photo.photo_name %></td>
+    <td><%= link_to 'Show', project_photo %></td>
+    <td><%= link_to 'Edit', edit_project_photo_path(project_photo) %></td>
+    <td><%= link_to 'Destroy', project_photo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project photo', new_project_photo_path %>

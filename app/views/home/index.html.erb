@@ -1,0 +1,61 @@
+<div id="page">
+	<div id="logo-wrapper">
+		<div id="logo">
+			<h2>
+			KN<span class="flower">O</span>BBL<span class="flower">O</span>SS<span class="flower">O</span>M
+			</h2>
+			<h1>Custom LEGO<sup>&reg;</sup> models</h1>
+		</div>
+	</div>
+	<footer>
+		&copy;2013 Knobblossom. LEGO&reg;, the minifigure, and the brick configuration are property of The LEGO Group of Companies, which does not sponsor, own, or endorse this site.
+	</footer>
+<script type="text/x-handlebars">
+	<section class="gallery">
+		<div class="tab horizontal">{{#linkTo 'gallery'}}Gallery{{/linkTo}}</div>
+		<div class="wrapper">
+			{{outlet}}
+		</div>
+	</section>
+</script>
+</div>
+
+
+<div id="flower-template">
+	<span class="flower-container">
+    <!-- six pedals must be first -->
+    <span class="pedal"></span>
+  	<span class="pedal"></span>
+  	<span class="pedal"></span>
+  	<span class="pedal"></span>
+  	<span class="pedal"></span>
+  	<span class="pedal"></span>
+  	<span class="base"></span>
+    <span class="stud"></span>
+  	<span class="stem"></span>
+  </span>
+</div>
+
+<script type="text/x-handlebars" id="gallery">
+	<header>
+		<h2>{{title}}</h2>
+		<p>{{description}}</p>
+	</header>
+</script>
+<script type="text/x-handlebars" id="photos">
+	<section class="slider">
+		<div class="control">&lt;</div>
+		<div class="control">&gt;</div>
+		<div class="thumbnails">
+			{{#each model}}
+			<img src="{{photo_src}}" />
+			{{/each}}
+		</div>
+	</section>
+</script>
+<script type="text/x-handlebars" id="photo">
+	<section class="photo">
+		<img src="{{photo_src_full}}" />
+		<p>{{caption}}</p>
+	</section>
+</script>

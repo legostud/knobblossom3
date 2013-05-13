@@ -1,0 +1,197 @@
+$flower_bg:red;
+
+html {
+	height:100%;
+}
+body.home {
+	background-color:black;
+	color:#aaaaaa;
+	height:100%;
+	font-family: Arial, sans-serif;
+	font-size:10px;
+	margin:0;
+	padding:0;
+
+	#page {
+		height:100%;
+		position:relative;
+		width:100%;
+	}
+
+	/* *********Start Logo************ */
+	#logo-wrapper {
+		color:greenyellow;
+		font-family: 'Milonga', cursive;
+		font-size:80px;
+
+		#logo {
+			left:50%;
+			position:absolute;
+			margin:-.5em 0 0 -6em;
+			text-align:center;
+			top:42%;
+			width:12em;
+			
+			h1 {
+				font-size:.5em;
+				margin:0;
+			}
+			h2 {
+				font-size:1em;
+				margin:0;
+			}
+		}
+	}
+	/* container at bottom of the page that contains the html for flowers */
+	#flower-template{
+		display:none;
+	}
+
+	.flower {
+		display:inline-block;
+	}
+		.flower-container{
+			display:inline-block;
+			height:1em;
+			position:relative;
+			width:1em;
+			
+			&:hover {
+				-ms-transition-duration: 5s;
+				-moz-transition-duration: 5s;
+				-webkit-transition-duration: 5s;
+				-o-transition-duration: 5s;
+				transition-duration: 5s;
+				-ms-transition-property: transform;      	
+				-moz-transition-property: transform;      	
+				-webkit-transition-property: transform;      	
+				-o-transition-property: transform;      	
+				transition-property: transform;      	
+				-ms-transform:rotate(10800deg); /* IE 9 */
+				-moz-transform:rotate(10800deg); /* Firefox */
+				-webkit-transform:rotate(1080deg); /* Safari and Chrome */
+				-o-transform:rotate(1080deg); /* Opera */
+				transform:rotate(1080deg);
+			}
+
+			.pedal {
+				background-color:$flower_bg;
+				border-radius:.15em;
+				display:block;
+				height:.3em;
+				position:absolute;
+				width:.3em;
+				
+				&:nth-child(1) {
+					left:.1em;
+					top:.25em;
+				}
+				&:nth-child(2) {
+					left:.1em;
+					top:.55em;
+				}
+				&:nth-child(3) {
+					left:.35em;
+					top:.1em;
+				}
+				&:nth-child(4) {
+					left:.6em;
+					top:.25em;
+				}
+				&:nth-child(5) {
+					left:.6em;
+					top:.55em;
+				}
+				&:nth-child(6) {
+					left:.35em;
+					top:.7em;
+				}
+			}
+			.base {
+				background-color:$flower_bg;
+				border-radius:.3em;
+				display:block;
+				left:.2em;
+				height:.6em;
+				position:absolute;
+				top:.25em;
+				width:.6em;
+			}
+			.stud {
+				background-color:$flower_bg;
+				border-radius:.2em;
+				box-shadow:.02em .02em #000000, -.02em -.02em #ffffff;
+				display:block;
+				left:.3em;
+				height:.4em;
+				position:absolute;
+				top:.35em;
+				width:.4em;
+			}
+			.stem {
+				background-color:green;
+				border-radius:.2em;
+				display:block;
+				height:.1em;
+				left:.45em;
+				position:absolute;
+				top:.5em;
+				width:.1em;
+			}
+		}
+
+	/* *********End Logo************ */
+
+	/* *********Start Gallery ************ */
+	.gallery {
+		background:#aaaaaa;
+		color:black;
+		/*left:-72%;*/
+		left:0;
+		position:absolute;
+		top:20%;
+		z-index:10;
+
+		.tab{ 
+			float:right;
+
+			a {
+				color:greenyellow;
+				font-family: 'Milonga', cursive;
+				font-size:40px;
+				text-decoration:none;
+			}
+		}
+			
+		.tab.horizontal { 
+			display:block;
+			text-align:center;
+			height:40px;
+			width:40px;
+			-ms-transform:rotate(90deg); /* IE 9 */
+			-moz-transform:rotate(90deg); /* Firefox */
+			-webkit-transform:rotate(90deg); /* Safari and Chrome */
+			-o-transform:rotate(90deg); /* Opera */
+			transform:rotate(90deg);
+			-ms-transform-origin: bottom right;
+			-moz-transform-origin: bottom right;
+			-webkit-transform-origin: bottom right;
+			-o-transform-origin: bottom right;
+			transform-origin: bottom right;
+		}
+		.wrapper {
+			width:600px;
+
+		}
+	}
+
+	/* *********End Gallery ************ */
+
+	footer {
+		bottom:0;
+		padding:1em 0;
+		position:fixed;
+		text-align:center;
+		width:100%;
+	}
+}
